@@ -1,0 +1,425 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+    /* Colors */
+    --bg-color: #080E19;
+    --white: #FFFFFF;
+    --submain-color: #E2E2E2;
+    --half-white: #83868C;
+    --form-bg: rgba(21, 26, 37, .4);
+    --form-border: rgba(32, 38, 48, 1);
+
+    /* Gradient Color */
+    --circle-1-gradient: radial-gradient(50% 50% at 50% 50%, rgba(68, 33, 86, 0.5) 0%, rgba(67, 33, 76, 0) 100%);
+    --circle-2-gradient: radial-gradient(50% 50% at 50% 50%, rgba(42, 29, 114, 0.5) 0%, rgba(67, 33, 76, 0) 100%);
+  
+    /* Typography */
+  
+    /* font-family */
+    --fontFamily-montserrat: 'Montserrat';
+  
+    /* font-size */
+    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-headline-1: calc(2rem + 2.5vw);
+    --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+  
+    /* font-weight */
+    --weight-regular: 400;
+    --weight-bold: 700;
+  
+    /* line-height */
+    --lineHeight-1: 1em;
+    --lineHeight-2: 1.2em;
+    --lineHeight-3: 1.5em;
+    --lineHeight-4: 1.6em;
+    --lineHeight-5: 1.85em;
+    --lineHeight-6: 1.4em;
+  
+    /* letter-spacing */
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px; 
+  
+    /* Spacing */
+    --section-space: 70px;
+  
+    /* Shadow */
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+  
+    /* Border Radius */
+    --radius-24: 24px;
+    --radius-10: 10px;
+    --radius-circle: 50%;
+  
+    /* Transition */
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+} 
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a,
+  img,
+  data,
+  span,
+  input,
+  button,
+  select,
+  ion-icon,
+  textarea {
+    display: block;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    height: auto;
+  }
+  
+  input,
+  button,
+  select,
+  textarea {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    outline: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--white);
+    font-family: var(--fontFamily-montserrat);
+    font-size: var(--fontSize-body-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lineHeight-5);
+    overflow: hidden ;
+    height: 300vh;
+  }
+  
+  body.loaded {
+    overflow: overlay;
+  }
+  
+  body.nav-active {
+    overflow: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent ;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+     background-color: var(--gold-crayola );
+  }
+  
+  /*-----------------------------------*\
+    #TYPOGRAPHY
+  \*-----------------------------------*/
+  h1 {
+    font-weight: 300;
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+    color: var(--half-white);
+    line-height: 2.7rem;
+    font-weight: 300;
+  }
+  /*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+  .container {
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 16px;
+    }
+    select:required:invalid {
+        color: gray;
+    }
+    option[value=""][disabled] {
+        display: none;
+    }
+    option {
+        color: black;
+    }
+  /*-----------------------------------*\
+    #BACKGROUND
+  \*-----------------------------------*/
+  .circle-1 {
+    width: 100vw;
+    height: 100vw;
+    background: var(--circle-1-gradient);
+    border-radius: var(--radius-circle);
+    position: absolute;
+    z-index: 0;
+    right: -50vw;
+    top: -50vw;
+    /* right: 0; */
+    /* top: 0; */
+    pointer-events: none;
+    /* animation: circle1 15s linear infinite; */
+  }
+  .circle-2 {
+    width: 100vw;
+    height: 100vw;
+    background: var(--circle-2-gradient);
+    border-radius: var(--radius-circle);
+    position: absolute;
+    z-index: 1;
+    /* left: 100vw; */
+    /* top: 100vh; */
+    left: -50vw;
+    top: 0;
+    pointer-events: none;
+    /* animation: circle2 15s linear infinite; */
+  }
+
+  @keyframes circle1 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(2000px);
+    }
+  }
+  @keyframes circle2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1000px);
+    }
+  }
+
+  main {
+      position: relative;
+      z-index: 3;
+      padding-bottom: 3rem;
+  }
+  
+  /*-----------------------------------*\
+    #SECTIONS
+  \*-----------------------------------*/
+  .section.main .headers {
+    margin-top: 30rem;
+    margin-bottom: 5.7rem;
+  }
+
+  .section.main .form {
+    padding: 2.5rem 9rem 3.5rem 9rem;
+    margin-bottom: 3rem;
+    background-color: var(--form-bg);
+    border-radius: var(--radius-24);
+    border: var(--form-border) 1px solid;
+  }
+  
+  .section.main .form .form-title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section.main .form .form-title span {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: var(--submain-color);
+  }
+  .section.main .form .form-title .grey-text {
+    color: var(--half-white);
+  }
+
+  .section.main .inputs {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .section.main .textarea {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .section.main .form input, .section.main .form select, .section.main .form textarea {
+    background-color: var(--form-bg);
+    border: var(--form-border) 1px solid;
+    padding: 10px 14px;
+    border-radius: var(--radius-10);
+    margin-bottom: 3.5rem;
+    color: var(--submain-color);
+  }
+
+  .section.main .form select {
+    appearance: none;
+    background-image: url("../icons/arrow_down_g.svg");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 0.8em;
+  }
+
+  .section.main .form textarea {
+    resize: none;
+  }
+
+  .section.main .form .send-btn {
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-inline: auto;
+    transition: scale var(--transition-1);
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+
+  }
+
+  .section.main .form .send-btn:hover {
+    scale: 1.15;
+    color: var(--white);
+  }
+
+  .section.main .contacts {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section.main .icon {
+    scale: 1.4;
+  }
+
+  .section.main .icon-vk {
+    display: block;
+    width: 17px;
+    height: 10px;
+    background-image: url(../icons/vk.svg);
+  }
+  .section.main .icon-tg {
+    display: block;
+    width: 12px;
+    height: 10px;
+    background-image: url(../icons/tg.svg);
+  }
+  .section.main .icon-wa {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../icons/wa.svg);
+  }
+
+  .section.main .links {
+    display: flex;
+    gap: 4rem;
+  }
+
+  /*-----------------------------------*\
+    #MEDIA QUERIES
+  \*-----------------------------------*/
+
+
+  
+  
+  @media (max-width: 1400px) {}
+  
+  @media (max-width: 1200px) {}
+  
+  @media (max-width: 992px) {
+    .section.main .form {
+      padding: 2.5rem 5rem 3.5rem 5rem;
+    }
+    
+  }
+  
+  @media (max-width: 768px) {
+    .section.main .headers {
+      margin-top: 20rem;
+    }
+    .section.main .inputs input, .section.main .inputs select {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .section.main .headers {
+      margin-top: 10rem;
+      text-align: center;
+    }
+    .section.main h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .section.main h2 {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+    .section.main .form {
+      padding: 2rem 3rem 3rem 3rem;
+    }
+    .section.main .contacts {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .section.main .contacts .links {
+      gap: 6rem;
+      scale: 1.2;
+      margin-top: 1.5rem;
+    }
+  }
