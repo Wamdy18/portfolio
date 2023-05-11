@@ -379,7 +379,12 @@
 
   
   
-  @media (max-width: 1400px) {}
+  @media (min-width: 1500px) {
+    body {
+      max-height: 100vh;
+      overflow-y: hidden;
+    }
+  }
   
   @media (max-width: 1200px) {}
   
