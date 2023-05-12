@@ -9,10 +9,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let message = `<b>Сообщение с сайта</b>\n\n`;
-    message += `<b>Отправитель:</b> ${form.name.value}\n`;
-    message += `<b>Номер телефона:</b> ${form.phone.value}\n`;
-    message += `<b>E-mail:</b> ${form.email.value}\n`;
-    message += `<b>Цель:</b>. ${form.reason.value}\n\n`;
+    message += `<b>Отправитель: </b>${form.name.value}\n`;
+    message += `<b>Номер телефона: </b>${form.phone.value}\n`;
+    message += `<b>E-mail: </b>${form.email.value}\n`;
+    message += `<b>Цель: </b>${form.reason.value}\n\n`;
     message += `<b>Сообщение:</b>\n${form.message.value}`;
 
     axios.post(URI_API, {
