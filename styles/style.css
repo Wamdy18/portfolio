@@ -398,7 +398,6 @@
   @media (min-width: 1500px) {
     body {
       max-height: 100vh;
-      overflow-y: hidden;
     }
   }
   
