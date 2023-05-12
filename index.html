@@ -20,17 +20,17 @@
                     <h1>Привет, меня зовут Владимир Петров</h1>
                     <h2>Я веб-разработчик и<br>разработчик мобильных приложений</h2>
                 </div>
-                <div class="form">
+                <form class="form" id="form">
                     <div class="form-title">
                         <span>Есть вопрос?</span>
                         <span class="grey-text">или</span>
                         <span>Хотите заказать разработку?</span>
                     </div>
                     <div class="inputs">
-                        <input type="text" placeholder="Как вас зовут?">
-                        <input type="text" placeholder="Ваш номер телефона">
-                        <input type="text" placeholder="E-mail">
-                        <select name="hero[]">
+                        <input type="text" placeholder="Как вас зовут?" name="name" autocomplete="off">
+                        <input type="text" placeholder="Ваш номер телефона" name="phone" autocomplete="off">
+                        <input type="text" placeholder="E-mail" name="email" autocomplete="off">
+                        <select name="reason">
                             <option value="" disabled selected class="option-grey" hidden>Цель сообщения</option>
                             <option value="Заказать сайт">Заказать сайт</option>
                             <option value="Заказать мобильное приложение">Заказать мобильное приложение</option>
@@ -38,10 +38,10 @@
                             <option value="Задать вопрос">Задать вопрос</option>
                             <option value="Другое">Другое</option>
                            </select>
-                        <textarea name="" id="" cols="30" rows="5" placeholder="Сообщение" class="textarea"></textarea>
+                        <textarea name="message" id="" cols="30" rows="5" placeholder="Сообщение" class="textarea"></textarea>
                     </div>
                     <button class="send-btn">Отправить</button>
-                </div>
+                </form>
                 <div class="contacts">
                     <span>Мои контакты:</span>
                     <span>+7 (999) 562 19 05</span>
@@ -56,6 +56,12 @@
                 </div>
             </div>
         </section>
+    <div class="message-sent" id="messageSent">
+        <span>Сообщение отправлено!</span>
+    </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

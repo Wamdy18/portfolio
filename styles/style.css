@@ -372,6 +372,22 @@
     gap: 4rem;
   }
 
+  .message-sent {
+    width: 300px;
+    margin-inline: auto;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 4rem;
+    background-color: var(--form-bg);
+    border: var(--form-border) 1px solid;
+    text-align: center;
+    transition: var(--transition-1);
+    padding-block: 1rem;
+    display: none;
+  }
+
   /*-----------------------------------*\
     #MEDIA QUERIES
   \*-----------------------------------*/
