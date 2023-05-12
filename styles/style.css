@@ -409,7 +409,7 @@
   
   @media (max-width: 768px) {
     .section.main .headers {
-      margin-top: 20rem;
+      margin-top: 20vh;
     }
     .section.main .inputs input, .section.main .inputs select {
       grid-column-start: 1;
