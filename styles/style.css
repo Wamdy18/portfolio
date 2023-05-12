@@ -264,7 +264,7 @@
     #SECTIONS
   \*-----------------------------------*/
   .section.main .headers {
-    margin-top: 30rem;
+    margin-top: 20vh;
     margin-bottom: 5.7rem;
   }
 
